@@ -45,3 +45,7 @@ images.forEach((img) => {
     figureElement.appendChild(imgElement);
     figureElement.appendChild(figCaptionElement);
 });
+
+const firstImage = imageContainer.firstElementChild.firstElementChild;
+
+firstImage.className = 'image active';
