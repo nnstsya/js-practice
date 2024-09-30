@@ -1,20 +1,4 @@
-const alertButton = document.querySelector('.alert-btn');
-const squareButton = document.querySelector('.square-btn');
-const numberInput = document.querySelector('.number-input');
 const imageContainer = document.querySelector('.image-container');
-
-alertButton.addEventListener('click', ()=> {
-    alert('Hello! This is an alert message.');
-});
-
-squareButton.addEventListener('click', () => {
-    const number = +numberInput.value;
-    if (number) {
-        alert(`The square of ${number} is ${number * number}`);
-    } else {
-        alert('Please enter a number.');
-    }
-});
 
 const images = [
     {
@@ -26,7 +10,7 @@ const images = [
         title: 'Pink Sunrise'
     },
     {
-        imageUrl: 'https://klike.net/uploads/posts/2019-01/1547365376_1.jpg',
+        imageUrl: 'https://klike.net/uploads/posts/2023-01/1674541972_2-4.jpg',
         title: 'Sunset in the Mountains'
     },
     {
@@ -40,12 +24,13 @@ const images = [
 ];
 
 images.forEach((img) => {
+    const figureElement = document.createElement('figure');
     const imgElement = document.createElement('img');
     imgElement.src = img.imageUrl;
     imgElement.alt = img.title;
     imgElement.className = 'image';
 
-    imgElement.addEventListener('click', function() {
+    imgElement.addEventListener('click', ()=>  {
         const currentActive = document.querySelector('.active');
         if (currentActive) {
             currentActive.classList.remove('active');
@@ -53,9 +38,10 @@ images.forEach((img) => {
         imgElement.classList.add('active');
     });
 
-    const titleElement = document.createElement('p');
-    titleElement.textContent = img.title;
+    const figCaptionElement = document.createElement('figcaption');
+    figCaptionElement.textContent = img.title;
 
-    imageContainer.appendChild(imgElement);
-    imageContainer.appendChild(titleElement);
+    imageContainer.appendChild(figureElement);
+    figureElement.appendChild(imgElement);
+    figureElement.appendChild(figCaptionElement);
 });
