@@ -7,7 +7,7 @@
 function logNumOrWord(n: number): void {
     for (let i = 1; i <= n; i++) {
 
-        const multipleOfThreeAndFive: boolean = !(i % 3 && i % 5);
+        const multipleOfThreeAndFive: boolean = !(i % 3) && !(i % 5);
         const multipleOfThree: boolean = !(i % 3);
         const multipleOfFive: boolean = !(i % 5);
 
@@ -70,7 +70,7 @@ function logElementsOfArr(arr: number[]): void {
 }
 
 function calculateSumOfAllElements(arr: number[]): number {
-    let sumOfAllElements: number = arr[0];
+    let sumOfAllElements: number = 0;
 
     for (let i = 1; i < arr.length; i++) {
         sumOfAllElements += arr[i];

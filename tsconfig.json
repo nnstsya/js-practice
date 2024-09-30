@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "lib": [
-      "ES7",
+      "ES2016",
       "dom"
     ]
   }

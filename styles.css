@@ -1,0 +1,10 @@
+.image {
+    width: 150px;
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.active {
+    width: 300px;
+    object-fit: contain;
+}
