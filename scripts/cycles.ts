@@ -72,7 +72,7 @@ function logElementsOfArr(arr: number[]): void {
 function calculateSumOfAllElements(arr: number[]): number {
     let sumOfAllElements: number = 0;
 
-    for (let i = 1; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         sumOfAllElements += arr[i];
     }
 

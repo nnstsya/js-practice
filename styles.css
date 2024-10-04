@@ -1,7 +1,6 @@
 .image {
-    width: 100px;
     height: 200px;
-    object-fit: cover;
+    object-fit: contain;
     cursor: pointer;
 }
 
@@ -10,17 +9,15 @@ figure {
     flex-direction: column;
     align-items: center;
     margin: 0;
+    transition: 0.5s ease-in-out all;
+    overflow: hidden;
+    width: 100px;
 }
 
 figcaption {
     text-align: center;
     width: 100px;
     overflow-wrap: break-word;
-}
-
-.active {
-    width: auto;
-    object-fit: contain;
 }
 
 .image-container {

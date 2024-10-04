@@ -33,9 +33,11 @@ images.forEach((img) => {
     imgElement.addEventListener('click', ()=>  {
         const currentActive = document.querySelector('.active');
         if (currentActive) {
+            currentActive.parentElement.style.width = '100px';
             currentActive.classList.remove('active');
         }
         imgElement.classList.add('active');
+        imgElement.parentElement.style.width = imgElement.width + 'px';
     });
 
     const figCaptionElement = document.createElement('figcaption');
